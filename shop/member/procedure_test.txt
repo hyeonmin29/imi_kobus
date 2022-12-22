@@ -1,0 +1,34 @@
+USE `study`;
+DROP procedure IF EXISTS `check_delDate`;
+
+DELIMITER $$
+USE `study`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `check_delDate`(IN session_Mile int)
+BEGIN
+
+drop view view_timeDiff;
+
+create view view_timeDiff
+AS
+select mileage_id, buypoint_id, buypoint_type, buypoint_amount, timestampdiff(day, buypoint_deldate, now()) as 'timediff' from buypoint where (select timestampdiff(day, buypoint_deldate, now())) >7;
+
+UPDATE buypoint A
+JOIN
+view_timeDiff B ON A.buypoint_id = B.buypoint_id
+SET
+A.buypoint_type = 503 
+WHERE
+B.timediff > 7 AND A.mileage_id = session_Mile;
+
+if (select count(buypoint_id) from view_timeDiff)>0 then
+insert into buypoint_log (mileage_id,buypoint_type,buypoint_price,buypoint_regdate) values (session_Mile,503,(select sum(buypoint_amount) from view_timeDiff where mileage_id=session_Mile),now());
+
+update mileage set buypoint_amount=(select sum(buypoint_amount) from buypoint where  mileage_id=session_Mile and buypoint_type= 500 or buypoint_type=502 ) where  mileage_id=session_Mile;
+end if; 
+
+
+  
+END$$
+
+DELIMITER ;
+

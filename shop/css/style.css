@@ -1,0 +1,306 @@
+@CHARSET "UTF-8";
+/*스따일*/
+body{
+	font-family:돋움체, Verdana;
+	font-size:11pt;
+	font-style:normal;
+	word-spacing:10px;
+	vertical-align: baseline;
+	color:#000000;
+	width:1600px;
+}
+
+a{
+	color:#000000;
+	text-decoration:none;
+}
+	
+	a:link{			/* 링크가 연결된 문자열의 속성 지정(단 한번도 클릭하지 않은 링크) */
+		color:#000000;
+		text-decoration:none;
+	}		
+	a:visited{			/* 링크가 연결되고 한번이라도 방문한 적이 있는 링크의 문자열 속성 지정 */
+		color:#000000;
+		text-decoration:none;
+	}
+	a:hover{				/* 링크위에 마우스를 올렸을때(over) 링크의 문자열 속성*/
+		color:#000000;
+		text-decoration:none;
+	}	
+	a:active{			/* 링크가 활성화될때 문자열의 속성 */
+		color:#000000;
+		text-decoration:none;
+	}
+	
+ul{
+	width:1400px;
+	list-style:none;
+	text-align:left;
+}
+
+fieldset {
+	border:1px solid #999999;
+	border-radius:8px;
+	box-shadow:0 0 10px #999999;
+	margin-top:20px;
+	margin-bottom:20px;
+	width:80%;
+}
+legend {
+	background:#ffffff;
+	font-weight:bold;
+	font-size:12pt;
+}
+form label{
+	width:150px;
+	float:left;
+	font-size:13px;
+}
+
+
+.menubar{
+border:none;
+border:0px;
+margin:0px;
+padding:0px;
+font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+font-size:14px;
+font-weight:bold;
+}
+
+.menubar ul{
+background: rgb(109,109,109);
+height:50px;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.menubar li{
+float:left;
+padding:0px;
+}
+
+.menubar li a{
+background: rgb(109,109,109);
+color:#cccccc;
+display:block;
+font-weight:normal;
+line-height:50px;
+margin:0px;
+padding:0px 25px;
+text-align:center;
+text-decoration:none;
+}
+
+.menubar li a:hover, .menubar ul li:hover a{
+background: rgb(71,71,71);
+color:#FFFFFF;
+text-decoration:none;
+}
+
+.menubar li ul{
+background: rgb(109,109,109);
+display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
+height:auto;
+padding:0px;
+margin:0px;
+border:0px;
+position:absolute;
+width:200px;
+z-index:200;
+/*top:1em;
+/*left:0;*/
+}
+
+.menubar li:hover ul{
+display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
+}
+
+.menubar li li {
+background: rgb(109,109,109);
+display:block;
+float:none;
+margin:0px;
+padding:0px;
+width:200px;
+}
+
+.menubar li:hover li a{
+background:none;
+}
+
+.menubar li ul a{
+display:block;
+height:50px;
+font-size:12px;
+font-style:normal;
+margin:0px;
+padding:0px 10px 0px 15px;
+text-align:left;
+}
+
+.menubar li ul a:hover, .menubar li ul li:hover a{
+background: rgb(71,71,71);
+border:0px;
+color:#ffffff;
+text-decoration:none;
+}
+
+.menubar p{
+clear:left;
+}
+
+
+textarea{
+	width:500px;
+	height:50px;
+}
+	#header{
+		width: 1400px;
+		padding:0;	
+		height: 50px;
+		background:#ffffff;
+	}		
+		
+	#menu{
+		font-family:맑은 고딕;
+		text-align:center;
+		color:#000000;
+		font-size:12pt;
+	}
+			#menu ul li{
+				overflow:hidden;		/* 내용이 길어지면 자르기 (visible:그대로 내용 보이기, scroll : 항상 스크롤을 생성하기, auto : 내용이 잘릴때만 스크롤 보이기)*/
+				display:inline-block;					
+				vertical-align: middle;     /* 세로 정렬을 가운데로 설정(위의 line-height와 같이 설정 필요함) */
+				padding-top: 5px;
+				padding-left: 5px;
+				padding-right: 10px;
+				padding-bottom: 10px;
+				border-left: 2px solid #999;
+				border-right: 2px solid #999;
+			}					
+	#btn{
+		width:40px;
+		background:#38588c;
+		font-family:맑은 고딕;
+		color:#ffffff;
+		text-align:center;
+	}
+	#btn  a{
+		color:#ffffff;
+		text-decoration:none;
+	}
+	#btn a:link{			/* 링크가 연결된 문자열의 속성 지정(단 한번도 클릭하지 않은 링크) */
+		color:#ffffff;
+		text-decoration:none;
+	}		
+	#btn a:visited{			/* 링크가 연결되고 한번이라도 방문한 적이 있는 링크의 문자열 속성 지정 */
+		color:#ffffff;
+		text-decoration:none;
+	}
+	#btn a:hover{				/* 링크위에 마우스를 올렸을때(over) 링크의 문자열 속성*/
+		color:#ffffff;
+		text-decoration:none;
+	}	
+	#btn a:active{			/* 링크가 활성화될때 문자열의 속성 */
+		color:#ffffff;
+		text-decoration:none;
+	}
+	#contents{
+		width: 1400px;
+		height:100%;
+		overflow:hidden;
+		text-align:center;
+	}
+	#footer{
+		width: 1400px;
+		padding-top: 30px;
+		padding-bottom: 10px;
+		font-family:Tahoma;
+		font-size:9pt;
+		text-align:center;
+	}
+	
+	#def{
+		font-family:맑은 고딕, Verdana;
+		font-size:12pt;
+		text-align:left;
+		line-height:200%;
+		margin-bottom:10px;
+	}
+	#sub{
+		font-size:10pt;		
+		text-align:left;
+		line-height:180%;
+	}
+	#headerRow{
+		margin:0 auto;
+		width:1400px;
+		height:30px; 
+		background-color:#b5e4a9;
+		vertical-align:middle;
+		line-height:30px;		
+		font-weight:bold;
+	}
+	#contsRow{
+		margin:0 auto;
+		width:1400px;
+		height:30px;
+		backgroud:#f00;
+	}
+	
+	#thCol{
+		margin:0px;
+		padding:0px;
+		width:200px;
+		height:30px; 
+		float:left;
+	}
+	#tdColimage{
+		margin:0px;
+		padding:0px;
+		height:100px;
+		width:200px;
+		float:left;
+	}
+	#tdCol{
+		margin:0px;
+		padding:0px;
+		height:30px; 
+		width:200px;
+		float:left;
+	}
+
+	#tdRowimage{
+		margin:0 auto;
+		width:1400px;
+		height:100px;
+		backgroud:#f00;
+	}
+	
+	#tdRow{
+		margin:0 auto;
+		width:1400px;
+		height:30px;
+		backgroud:#f00;
+	
+	}
+	
+	#mcontsRow{
+		margin:0 auto;
+		width:1400px;
+		height:30px;
+		backgroud:#f00;
+	}
+	#dftdCol{
+		margin:0px;
+		padding:0px;
+		height:30px; 
+		width:180px;
+		float:left;
+	}
+	#dftitle{
+		background:gray;
+	}
+	
